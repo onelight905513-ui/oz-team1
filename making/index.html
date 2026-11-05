@@ -248,7 +248,7 @@
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="assets/img/team/4.png" alt="..." />
                             <h4>박덕호</h4>
-                            <p class="text-muted">마인드 상담코너</p>
+                            <p class="text-muted">마음 바라보기</p>
                             <input
                                type="text"
                                class="team-question"
@@ -284,12 +284,15 @@
             rows="5"
             placeholder="요청사항을 입력해주세요."
         ></textarea>
+       <div class="write-button-wrap">
+    <button type="button" class="write-button">기입</button>
+</div>
     </div>
 </div>
         
         </section>
             
-        <!-- Clients-->
+        <!-- Clients
         <div class="py-5">
             <div class="container">
                 <div class="row align-items-center">
@@ -307,84 +310,128 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Contact-->
-        <section class="page-section" id="contact">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">신청하기</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        <!-- Contact -->
+<section class="page-section" id="contact">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading">가입하기</h2>
+            <h3 class="section-subheading text-muted">
+                연락처와 관심 있는 취미를 입력해주세요.
+            </h3>
+        </div>
+
+        <form id="hobbyForm">
+            <div class="row mb-5">
+                <!-- 왼쪽: 연락처 -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input
+                            class="form-control"
+                            name="name"
+                            type="text"
+                            placeholder="이름"
+                            aria-label="이름"
+                            required
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <input
+                            class="form-control"
+                            name="email"
+                            type="email"
+                            placeholder="이메일"
+                            aria-label="이메일"
+                            required
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <input
+                            class="form-control"
+                            name="phone"
+                            type="tel"
+                            placeholder="전화번호"
+                            aria-label="전화번호"
+                            required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <input
+                            class="form-control"
+                            name="name"
+                            type="text"
+                            placeholder="생년월일"
+                            aria-label="생년월일"
+                            required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <input
+                            class="form-control"
+                            name="name"
+                            type="text"
+                            placeholder="지역"
+                            aria-label="지역"
+                            required
+                        />
+                    </div>
                 </div>
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- * * SB Forms Contact Form * *-->
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- This form is pre-integrated with SB Forms.-->
-                <!-- To make this form functional, sign up at-->
-                <!-- https://startbootstrap.com/solution/contact-forms-->
-                <!-- to get an API token!-->
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                    <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <!-- Name input-->
-                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                            </div>
-                            <div class="form-group">
-                                <!-- Email address input-->
-                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <div class="form-group mb-md-0">
-                                <!-- Phone number input-->
-                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group form-group-textarea mb-md-0">
-                                <!-- Message input-->
-                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Submit success message-->
-                    <!---->
-                    <!-- This is what your users will see when the form-->
-                    <!-- has successfully submitted-->
-                    <div class="d-none" id="submitSuccessMessage">
-                        <div class="text-center text-white mb-3">
-                            <div class="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
-                            <br />
-                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                        </div>
-                    </div>
-                    <!-- Submit error message-->
-                    <!---->
-                    <!-- This is what your users will see when there is-->
-                    <!-- an error submitting the form-->
-                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                    <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
-                </form>
+
+                <!-- 오른쪽: 관심 취미 -->
+                <div class="col-md-6">
+                    <fieldset class="hobby-options">
+                        <legend>관심 취미</legend>
+
+                        <label class="hobby-option">
+                            <input type="checkbox" name="hobby" value="bookclub" />
+                            <span>Bookclub</span>
+                        </label>
+
+                        <label class="hobby-option">
+                            <input type="checkbox" name="hobby" value="outdoor" />
+                            <span>Outdoor</span>
+                        </label>
+
+                        <label class="hobby-option">
+                            <input type="checkbox" name="hobby" value="photography" />
+                            <span>Photography</span>
+                        </label>
+
+                        <label class="hobby-option">
+                            <input type="checkbox" name="hobby" value="mind" />
+                            <span>마음바라보기</span>
+                        </label>
+
+                        <label class="hobby-option">
+                            <input type="checkbox" name="hobby" value="music" />
+                            <span>Music</span>
+                        </label>
+                    </fieldset>
+                </div>
             </div>
-        </section>
+
+            <div class="text-center">
+                <button class="write-button" type="submit">summit</button>
+            </div>
+        </form>
+    </div>
+</section>
         <!-- Footer-->
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2023</div>
+                    <div class="col-lg-4 text-lg-start">hobbytogether &copy; Your Website 2026</div>
                     <div class="col-lg-4 my-3 my-lg-0">
                         <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                     <div class="col-lg-4 text-lg-end">
-                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
-                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                        <a class="link-dark text-decoration-none me-3" href="#!">정책</a>
+                        <a class="link-dark text-decoration-none" href="#!">이용약관</a>
                     </div>
                 </div>
             </div>
