@@ -180,68 +180,65 @@
                 </div>
             </div>
         </section>
-        <!-- About-->
-        <section class="page-section" id="about">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">About</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-                <ul class="timeline">
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>2009-2011</h4>
-                                <h4 class="subheading">Our Humble Beginnings</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>March 2011</h4>
-                                <h4 class="subheading">An Agency is Born</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>December 2015</h4>
-                                <h4 class="subheading">Transition to Full Service</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>July 2020</h4>
-                                <h4 class="subheading">Phase Two Expansion</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image">
-                            <h4>
-                                Be Part
-                                <br />
-                                Of Our
-                                <br />
-                                Story!
-                            </h4>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
+        <!-- REVIEWS START: 이 영역을 기존 About 섹션과 교체 -->
+<section class="page-section reviews-section" id="about" aria-labelledby="reviews-heading">
+  <div class="reviews-layout">
+    <div class="reviews-intro"><h2 id="reviews-heading">멤버들의 모임 후기 🔍</h2><p>모임 신청이 고민된다면<br>멤버들의 모임 이야기를 들어보세요</p></div>
+    <div class="reviews-window" role="region" aria-label="모임 후기, 좌우로 스크롤할 수 있습니다" tabindex="0">
+      <div class="reviews-track"><div class="reviews-group">
+        <!-- MUSIC: 별점은 data-rating 숫자만 수정하세요. -->
+        <button type="button" class="review-card" data-review="music" aria-haspopup="dialog" aria-controls="review-dialog">
+          <span class="review-card-header"><img class="review-thumbnail" src="assets/img/reviews/music.jpg" alt="" loading="lazy"><span class="review-category">🎹 MUSIC</span><span class="review-arrow" aria-hidden="true">›</span></span>
+          <span class="review-body">혼자 연습할 땐 틀리면 그냥 멈췄는데, 같이 연주하니까 끝까지 해보게 되더라고요. 처음으로 한 곡을 맞춰 연주했을 때 정말 뿌듯했어요!</span>
+          <span class="review-rating" data-rating="4.5"><span class="review-stars" aria-hidden="true">★★★★★<span class="review-stars-fill">★★★★★</span></span> <span class="review-score">4.5</span></span>
+          <span class="review-author">멜로디님의 리뷰</span>
+        </button>
+        <!-- READING: 별점은 data-rating 숫자만 수정하세요. -->
+        <button type="button" class="review-card" data-review="reading" aria-haspopup="dialog" aria-controls="review-dialog">
+          <span class="review-card-header"><img class="review-thumbnail" src="assets/img/reviews/reading.jpg" alt="" loading="lazy"><span class="review-category">📚 READING</span><span class="review-arrow" aria-hidden="true">›</span></span>
+          <span class="review-body">같은 책을 읽어도 이렇게 다르게 느낄 수 있다는 게 신기했어요. 어려운 이야기를 해야 할까 봐 걱정했는데, 좋아하는 문장 하나로도 대화가 술술 이어졌어요.</span>
+          <span class="review-rating" data-rating="4.8"><span class="review-stars" aria-hidden="true">★★★★★<span class="review-stars-fill">★★★★★</span></span> <span class="review-score">4.8</span></span>
+          <span class="review-author">책갈피님의 리뷰</span>
+        </button>
+        <!-- OUTDOOR: 별점은 data-rating 숫자만 수정하세요. -->
+        <button type="button" class="review-card" data-review="outdoor" aria-haspopup="dialog" aria-controls="review-dialog">
+          <span class="review-card-header"><img class="review-thumbnail" src="assets/img/reviews/outdoor.jpg" alt="" loading="lazy"><span class="review-category">🌿 OUTDOOR</span><span class="review-arrow" aria-hidden="true">›</span></span>
+          <span class="review-body">주말마다 집에만 있다가 오랜만에 밖으로 나왔어요. 천천히 걸으면서 풍경도 보고 이야기도 나누니 좋더라고요. 덕분에 다음 주말도 조금 기대돼요.</span>
+          <span class="review-rating" data-rating="4.7"><span class="review-stars" aria-hidden="true">★★★★★<span class="review-stars-fill">★★★★★</span></span> <span class="review-score">4.7</span></span>
+          <span class="review-author">산들바람님의 리뷰</span>
+        </button>
+        <!-- PHOTO: 별점은 data-rating 숫자만 수정하세요. -->
+        <button type="button" class="review-card" data-review="photo" aria-haspopup="dialog" aria-controls="review-dialog">
+          <span class="review-card-header"><img class="review-thumbnail" src="assets/img/reviews/photo.jpg" alt="" loading="lazy"><span class="review-category">📷 PHOTO</span><span class="review-arrow" aria-hidden="true">›</span></span>
+          <span class="review-body">좋은 카메라가 없어도 괜찮을까 했는데 휴대폰으로도 충분했어요. 서로 찍은 사진을 구경하는 재미가 쏠쏠해요. 요즘은 그냥 지나치던 골목에서도 사진을 찍게 돼요.</span>
+          <span class="review-rating" data-rating="5.0"><span class="review-stars" aria-hidden="true">★★★★★<span class="review-stars-fill">★★★★★</span></span> <span class="review-score">5.0</span></span>
+          <span class="review-author">찰칵님의 리뷰</span>
+        </button>
+      </div></div>
+    </div>
+  </div>
+  <dialog class="review-dialog" id="review-dialog" aria-labelledby="review-dialog-title">
+    <button class="review-dialog-close" type="button" aria-label="상세 후기 닫기" autofocus>×</button>
+    <div class="review-dialog-content"></div>
+  </dialog>
+  <template id="review-detail-music">
+    <img class="review-dialog-image" src="assets/img/reviews/music.jpg" alt="MUSIC 취미활동 사진">
+    <div class="review-dialog-copy"><p class="review-dialog-category">🎹 MUSIC</p><h2 id="review-dialog-title">혼자서는 멈췄을 곡을, 함께 끝까지</h2><div class="review-dialog-rating"></div><p class="review-dialog-author">멜로디님의 리뷰</p><p>혼자 연습할 땐 틀리면 그냥 멈췄는데, 같이 연주하니까 끝까지 해보게 되더라고요. 처음으로 한 곡을 맞춰 연주했을 때 정말 뿌듯했어요!</p><p>악기를 잘 다루는 사람들만 있을까 봐 처음에는 조금 긴장했어요. 그런데 각자 할 수 있는 부분부터 천천히 맞춰 보니 부담이 훨씬 줄었어요. 박자가 어긋나도 다시 시작하면 된다는 분위기가 좋았어요.</p><p>연습 시간이 조금 더 길었으면 하는 아쉬움은 있었지만, 함께 한 곡을 끝냈다는 성취감이 오래 남았어요. 집에 돌아와서도 다음에 맞춰 볼 부분을 다시 연습하게 되더라고요.</p></div>
+  </template>
+  <template id="review-detail-reading">
+    <img class="review-dialog-image" src="assets/img/reviews/reading.jpg" alt="READING 취미활동 사진">
+    <div class="review-dialog-copy"><p class="review-dialog-category">📚 READING</p><h2 id="review-dialog-title">한 권의 책에서 만난 서로 다른 이야기</h2><div class="review-dialog-rating"></div><p class="review-dialog-author">책갈피님의 리뷰</p><p>같은 책을 읽어도 이렇게 다르게 느낄 수 있다는 게 신기했어요. 어려운 이야기를 해야 할까 봐 걱정했는데, 좋아하는 문장 하나로도 대화가 술술 이어졌어요.</p><p>평소에는 책을 읽고 혼자 생각을 정리하는 편이었어요. 모임에서는 마음에 남은 문장을 하나씩 나누었는데, 제가 그냥 지나쳤던 장면을 다른 분이 이야기해 주셔서 다시 읽어 보고 싶어졌어요.</p><p>말을 잘해야 한다는 부담 없이 서로의 감상을 들어 주는 분위기였어요. 시간이 조금 빠듯해서 마지막 이야기를 충분히 나누지 못한 건 아쉬웠지만, 다음 책도 함께 읽고 싶어요.</p></div>
+  </template>
+  <template id="review-detail-outdoor">
+    <img class="review-dialog-image" src="assets/img/reviews/outdoor.jpg" alt="OUTDOOR 취미활동 사진">
+    <div class="review-dialog-copy"><p class="review-dialog-category">🌿 OUTDOOR</p><h2 id="review-dialog-title">밖으로 한 걸음, 주말이 달라졌어요</h2><div class="review-dialog-rating"></div><p class="review-dialog-author">산들바람님의 리뷰</p><p>주말마다 집에만 있다가 오랜만에 밖으로 나왔어요. 천천히 걸으면서 풍경도 보고 이야기도 나누니 좋더라고요. 덕분에 다음 주말도 조금 기대돼요.</p><p>오랜만에 몸을 움직이는 거라 잘 따라갈 수 있을지 걱정했어요. 가볍게 몸을 풀고 제 속도에 맞춰 움직이다 보니 어느새 긴장도 풀리고 주변 풍경이 눈에 들어왔어요.</p><p>중간중간 쉬면서 이야기를 나눌 수 있어서 처음 만난 분들과도 자연스럽게 가까워졌어요. 끝날 무렵에는 조금 지쳤지만 기분은 훨씬 가벼워졌고, 다음에는 물을 넉넉히 챙겨 다시 참여하고 싶어요.</p></div>
+  </template>
+  <template id="review-detail-photo">
+    <img class="review-dialog-image" src="assets/img/reviews/photo.jpg" alt="PHOTO 취미활동 사진">
+    <div class="review-dialog-copy"><p class="review-dialog-category">📷 PHOTO</p><h2 id="review-dialog-title">익숙한 골목이 새로운 장면이 되는 시간</h2><div class="review-dialog-rating"></div><p class="review-dialog-author">찰칵님의 리뷰</p><p>좋은 카메라가 없어도 괜찮을까 했는데 휴대폰으로도 충분했어요. 서로 찍은 사진을 구경하는 재미가 쏠쏠해요. 요즘은 그냥 지나치던 골목에서도 사진을 찍게 돼요.</p><p>카메라 없이 휴대폰만 들고 참여했는데도 편하게 즐길 수 있었어요. 빛이 들어오는 방향이나 촬영 위치를 조금만 바꿔도 사진의 분위기가 달라지는 게 신기했어요.</p><p>같은 장소에서 찍었는데도 사람마다 담아낸 장면이 달라서 서로의 사진을 보는 시간이 특히 재미있었어요. 잘 찍어야 한다는 부담보다 내가 좋아하는 장면을 찾는 즐거움을 알게 된 모임이었어요.</p></div>
+  </template>
+</section>
+<!-- ABOUT REVIEWS END -->
         <!-- Team-->
         <section class="page-section bg-light" id="team">
             <div class="container">
