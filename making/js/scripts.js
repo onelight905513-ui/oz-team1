@@ -5,7 +5,7 @@
 */
 //
 // Scripts
-// 
+//
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
     };
 
-    // Shrink the navbar 
+    // Shrink the navbar
     navbarShrink();
 
     // Shrink the navbar when page is scrolled
@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const content = dialog.querySelector('.review-dialog-content');
   const close = dialog.querySelector('.review-dialog-close');
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const SPEED = 22; 
+  const SPEED = 22;
   let hovering = false, touching = false, last = 0, position = 0;
   let opener = null;
 
