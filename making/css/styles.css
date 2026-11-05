@@ -11314,3 +11314,41 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+/* REVIEWS START */
+#about.reviews-section { background:#f4f4f4; padding:72px 0; font-family:Arial,"Noto Sans KR",sans-serif; color:#262626; }
+#about .reviews-layout { display:grid; grid-template-columns:340px minmax(0,1fr); gap:40px; max-width:1500px; margin:auto; padding:0 24px; }
+#about .reviews-intro h2 { font:500 28px/1.5 Arial,sans-serif; letter-spacing:-1px; margin:0 0 8px; }
+#about .reviews-intro p { font-size:18px; line-height:1.8; color:#8b8b8b; margin:0; }
+#about .reviews-window { overflow-x:auto; scrollbar-width:none; min-width:0; border-radius:16px; overscroll-behavior-x:contain; }
+#about .reviews-window::-webkit-scrollbar { display:none; }
+#about .reviews-track, #about .reviews-group { display:flex; width:max-content; }
+#about .reviews-group { gap:28px; padding-right:28px; }
+#about .review-card { box-sizing:border-box; display:flex; flex-direction:column; flex-shrink:0; width:350px; min-height:320px; padding:18px; border-radius:16px; background:white; color:#262626; text-align:left; font:inherit; border:2px solid transparent; cursor:pointer; transition:border-color .2s; }
+#about .review-card:hover { border-color:#efc04a; }
+#about .review-card:focus-visible, #about .reviews-window:focus-visible, #about .review-dialog-close:focus-visible { outline:3px solid #8c6b10; outline-offset:-3px; }
+#about .review-card-header { display:flex; gap:12px; align-items:center; width:100%; padding-bottom:12px; border-bottom:1px solid #f0f0f0; }
+#about .review-thumbnail { flex:0 0 60px; width:60px; height:60px; border-radius:12px; object-fit:cover; }
+#about .review-category { font-size:16px; font-weight:600; }
+#about .review-arrow { margin-left:auto; font-size:25px; }
+#about .review-body { display:block; font-size:16px; line-height:1.8; margin:12px 0 28px; word-break:keep-all; overflow-wrap:anywhere; }
+#about .review-rating { display:flex; align-items:center; gap:7px; margin-top:auto; font-size:16px; }
+#about .review-stars { position:relative; display:inline-block; color:#ddd; font:21px/1 Arial,sans-serif; white-space:nowrap; letter-spacing:0; }
+#about .review-stars-fill { position:absolute; top:0; left:0; width:var(--rating-fill,0%); overflow:hidden; color:#efbb32; font:inherit; }
+#about .review-score { color:#262626; font-size:16px; }
+#about .review-author { display:block; margin:10px 0 0; color:#888; font-size:15px; }
+#about .review-dialog { padding:0; border:0; border-radius:22px; width:min(1100px,94vw); max-width:94vw; max-height:90vh; max-height:90dvh; overflow:auto; color:#262626; background:white; box-shadow:0 24px 100px #0005; }
+#about .review-dialog::backdrop { background:rgba(15,20,25,.72); }
+#about .review-dialog-content { display:grid; grid-template-columns:1.1fr 1fr; }
+#about .review-dialog-image { width:100%; height:100%; max-height:85vh; min-height:400px; object-fit:contain; background:#171c1c; }
+#about .review-dialog-copy { padding:48px 32px 32px; }
+#about .review-dialog-copy h2 { font:600 27px/1.45 Arial,sans-serif; letter-spacing:-.7px; margin:12px 0 20px; }
+#about .review-dialog-copy p { font-size:16px; line-height:1.85; word-break:keep-all; overflow-wrap:anywhere; }
+#about .review-dialog-copy .review-dialog-category { font-size:13px; letter-spacing:2px; font-weight:700; color:#817045; }
+#about .review-dialog-copy .review-dialog-author { font-size:14px; color:#888; margin-top:10px; margin-bottom:24px; }
+#about .review-dialog-close { position:absolute; z-index:2; right:12px; top:12px; width:40px; height:40px; border:1px solid #ddd; border-radius:50%; background:white; color:#333; font:28px/1 Arial,sans-serif; cursor:pointer; }
+body.review-popup-open { overflow:hidden; }
+@media(max-width:991px) { #about .reviews-layout { grid-template-columns:1fr; gap:24px; } #about.reviews-section { padding:48px 0; } }
+@media(max-width:700px) { #about .review-dialog-content { grid-template-columns:1fr; } #about .review-dialog-image { height:32vh; min-height:0; } #about .review-dialog-copy { padding:24px; } #about .review-dialog-copy h2 { font-size:24px; } }
+@media(max-width:480px) { #about .reviews-layout { padding:0 16px; } #about .review-card { width:280px; } #about .reviews-intro h2 { font-size:25px; } #about .reviews-intro p { font-size:16px; } }
+/* REVIEWS END */
