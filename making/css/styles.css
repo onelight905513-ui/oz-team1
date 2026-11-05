@@ -11352,3 +11352,175 @@ body.review-popup-open { overflow:hidden; }
 @media(max-width:700px) { #about .review-dialog-content { grid-template-columns:1fr; } #about .review-dialog-image { height:32vh; min-height:0; } #about .review-dialog-copy { padding:24px; } #about .review-dialog-copy h2 { font-size:24px; } }
 @media(max-width:480px) { #about .reviews-layout { padding:0 16px; } #about .review-card { width:280px; } #about .reviews-intro h2 { font-size:25px; } #about .reviews-intro p { font-size:16px; } }
 /* REVIEWS END */
+
+/* 전역 초기화 및 폰트 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nanum Gothic", "나눔고딕", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  background-color: #f8f9fa;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+/* 브랜드 컬러 변수 */
+:root {
+  --brand-blue: #002ed7;
+  --brand-yellow: #f9d126;
+  --text-dark: #0f172a;
+  --text-muted: #64748b;
+  --bg-card: #ffffff;
+}
+
+/* 섹션 레이아웃 스타일 */
+.why-section {
+  padding: 90px 20px;
+  background-color: #f8fafc;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: rgba(0, 46, 215, 0.08);
+  color: var(--brand-blue);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+  word-break: keep-all;
+}
+
+.highlight-blue {
+  color: var(--brand-blue);
+}
+
+.highlight-yellow {
+  background: linear-gradient(120deg, rgba(249, 209, 38, 0.4) 0%, rgba(249, 209, 38, 0.9) 100%);
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--text-muted);
+  word-break: keep-all;
+}
+
+/* 카드 그리드 레이아웃 */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.feature-card {
+  background-color: var(--bg-card);
+  border-radius: 24px;
+  padding: 40px 30px;
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 6px 12px -2px rgba(0, 46, 215, 0.04);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  opacity: 0;
+  transform: translateY(20px);
+  position: relative;
+}
+
+.feature-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--brand-blue);
+  box-shadow: 0 16px 30px -6px rgba(0, 46, 215, 0.15);
+}
+
+/* 아이콘 박스 스타일 */
+.card-icon {
+  width: 64px;
+  height: 64px;
+  background-color: rgba(0, 46, 215, 0.07);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.card-icon svg {
+  width: 32px;
+  height: 32px;
+  color: var(--brand-blue);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .card-icon {
+  background-color: var(--brand-yellow);
+  transform: scale(1.08) rotate(-5deg);
+}
+
+.feature-card:hover .card-icon svg {
+  color: #002ed7;
+}
+
+/* 카드 텍스트 내용 */
+.target-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 14px;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+
+.target-desc {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  word-break: keep-all;
+}
+
+/* 모바일 화면 대응 반응형 */
+@media (max-width: 992px) {
+  .cards-grid {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .title {
+    font-size: 26px;
+  }
+}
