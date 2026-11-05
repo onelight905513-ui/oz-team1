@@ -356,7 +356,7 @@ optgroup,
 textarea {
   margin: 0;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 3;
   line-height: inherit;
 }
 
@@ -11359,7 +11359,7 @@ body.review-popup-open { overflow:hidden; }
 /* 전역 초기화 및 폰트 설정 */
 * {
   margin: 0;
-  padding: 0;
+  padding: 10;
   box-sizing: border-box;
 }
 
@@ -11526,4 +11526,22 @@ button, input, select, textarea {
   .title {
     font-size: 26px;
   }
+}
+
+.request-title {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.request-box {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+  border: 2px solid #aaa;
+  border-radius: 10px;
+  font-size: 16px;
+  resize: vertical;
 }
