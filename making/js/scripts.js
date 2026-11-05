@@ -138,3 +138,30 @@ window.addEventListener('DOMContentLoaded', () => {
   requestAnimationFrame(tick);
 });
 // REVIEWS END
+
+document.addEventListener('DOMContentLoaded', () => {
+  // 스크롤 시 카드가 부드럽게 나타나는 애니메이션 (Intersection Observer)
+  const cards = document.querySelectorAll('.feature-card');
+
+  const observerOptions = {
+    root: null,
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const cardObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // 카드별로 약간의 시차(Stagger)를 주어 등장
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, index * 150);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  cards.forEach(card => {
+    cardObserver.observe(card);
+  });
+});
