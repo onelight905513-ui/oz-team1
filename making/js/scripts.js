@@ -205,3 +205,24 @@ button.addEventListener("click", () => {
 
     input.value = "";
 });
+
+
+//const modal = document.querySelector("#review-modal");
+const memo = document.querySelector("#review-memo");
+let selectedMember = null;
+
+// 누른 버튼의 팀원을 기억하고 팝업 열기
+document.querySelectorAll(".open-review").forEach((button) => {
+    button.addEventListener("click", () => {
+        selectedMember = button.closest(".team-member");
+        memo.value = "";
+        modal.showModal();
+        memo.focus();
+    });
+});
+
+
+
+
+
+
