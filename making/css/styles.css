@@ -356,7 +356,7 @@ optgroup,
 textarea {
   margin: 0;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 3;
   line-height: inherit;
 }
 
@@ -11362,7 +11362,7 @@ body.review-popup-open { overflow:hidden; }
 /* 전역 초기화 및 폰트 설정 */
 * {
   margin: 0;
-  padding: 0;
+  padding: 10;
   box-sizing: border-box;
 }
 
@@ -11529,4 +11529,114 @@ button, input, select, textarea {
   .title {
     font-size: 26px;
   }
+}
+
+.request-title {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.request-box {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+  border: 2px solid #aaa;
+  border-radius: 10px;
+  font-size: 16px;
+  resize: vertical;
+}
+
+.write-button-wrap {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.write-button {
+  background-color: #2038df;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 18px 60px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.write-button:hover {
+  background-color: #182bb5;
+}
+
+/* 신청 영역 배경 */
+section#contact {
+  background-image: none;
+  background-color: #f9d126;
+}
+
+section#contact .section-heading {
+  color: #212529;
+}
+
+/* 연락처 입력칸 */
+
+#hobbyForm .form-group {
+  margin-bottom: 24px;
+}
+#contact .form-control {
+  font-size: 16px;
+}
+
+/* 관심 취미 영역 */
+.hobby-options {
+  border: none;
+  padding: 0 24px;
+  margin: 0;
+  min-width: 0;
+}
+
+.hobby-options legend {
+  float: none;
+  width: auto;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #212529;
+}
+
+/* 취미를 한 줄씩 세로 배치 */
+.hobby-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  font-size: 18px;
+  color: #212529;
+  cursor: pointer;
+}
+
+/* 동그란 체크박스 */
+.hobby-option input {
+  appearance: none;
+  -webkit-appearance: none;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  border: 2px solid #89918a;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+
+.hobby-option input:checked {
+  background-color: #2038df;
+  border-color: #2038df;
+  box-shadow: inset 0 0 0 4px white;
+}
+
+.hobby-option input:focus-visible {
+  outline: 3px solid #2038df;
+  outline-offset: 3px;
 }
