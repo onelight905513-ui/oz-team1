@@ -52,27 +52,6 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
-// 버튼 클릭 시 모달이 열려있으면 닫고, 닫힌 후에 #contact로 이동
-document.querySelectorAll('.hobby-join').forEach((button) => {
-    button.addEventListener('click', () => {
-        const modalElement = button.closest('.modal');
-        const showContact = () => {
-            if (location.hash !== '#contact') {
-                location.hash = '#contact';
-                return;
-            }
-            document.getElementById('contact')?.scrollIntoView();
-        };
-
-        if (!modalElement || !window.bootstrap) {
-            showContact();
-            return;
-        }
-
-        modalElement.addEventListener('hidden.bs.modal', showContact, { once: true });
-        window.bootstrap.Modal.getOrCreateInstance(modalElement).hide();
-    });
-});
 
 // REVIEWS START
 window.addEventListener('DOMContentLoaded', () => {
@@ -206,4 +185,23 @@ document.querySelectorAll(".review-box").forEach((box) => {
 
         input.value = "";
     });
+});
+
+
+const input = document.querySelector(".request-box");
+const button = document.querySelector(".write-button");
+
+button.addEventListener("click", () => {
+    const text = input.value.trim();
+
+    if (text === "") {
+        alert("요청사항을 입력해 주세요!");
+        return;
+    }
+
+    const request = document.createElement("p");
+    request.textContent = text;
+    document.querySelector(".write-button-wrap").after(request);
+
+    input.value = "";
 });
