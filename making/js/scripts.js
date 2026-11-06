@@ -165,3 +165,24 @@ document.addEventListener('DOMContentLoaded', () => {
     cardObserver.observe(card);
   });
 });
+
+
+document.querySelectorAll(".review-box").forEach((box) => {
+    const input = box.querySelector(".team-question");
+    const button = box.querySelector(".review-btn");
+
+    button.addEventListener("click", () => {
+        const text = input.value.trim();
+
+        if (text === "") {
+            alert("리뷰를 입력해 주세요!");
+            return;
+        }
+
+        const review = document.createElement("p");
+        review.textContent = text;
+        box.parentElement.appendChild(review);
+
+        input.value = "";
+    });
+});

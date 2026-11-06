@@ -11637,3 +11637,13 @@ section#contact .section-heading {
   outline: 3px solid #2038df;
   outline-offset: 3px;
 }
+
+.review-btn {
+    background-color: #f9d126;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 11px;
+    white-space: nowrap;
+    cursor: pointer;
+}
